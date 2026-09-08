@@ -1,51 +1,17 @@
 import 'package:lab1_dart/lab1_dart.dart' as lab1_dart;
-
 void main() {
-  // String name = "Артём";
-  // int age = 20;
-  // double height = 1.75;
-  // bool isStudent = true;
+  List<int> numbers = [3, 1, 4, 1, 5, 9];
+  numbers.sort((a, b) => b - a);
+  print('Отсортированные числа: $numbers');
 
-  // print(name);
-  // print(age);
-  // print(height);
-  // print(isStudent);
+  List<String> names = ['Артём', 'Мария', 'Иван'];
+  List<String> upperNames = names.map((name) => name.toUpperCase()).toList();
+  print('Верхний регистр: $upperNames');
 
-  // print('Привет, $name! Тебе $age лет.');
-  // print('Через 5 лет тебе будет ${age + 5} лет.');
-  // print('Рост: ${height} м, студент: $isStudent');
+  List<String> longNames = names.where((name) => name.length > 4).toList();
+  print('Имена длиннее 4 букв: $longNames');
 
-  // var score = 95;
-  // var language = 'Dart';
-  // print('$language: $score');
-
-  // const String appName = 'Lab1';
-  // final int startYear = 2026;
-  // print('$appName started in $startYear');
-
-  // String? city = null;
-  // if (city != null) {
-  //   print(
-  //     city.toUpperCase(),
-  //   );
-  // }
-  // print(city?.toUpperCase());
-  // String? nickname = null;
-  // String display =
-  //     nickname ?? 'Аноним';
-  // print(display);
-
-  List<String> fruits = ['яблоко', 'банан', 'груша'];
-  fruits.add('апельсин');
-  print(fruits[0]);
-  print(fruits.length);
-
-  Map<String, dynamic> person = {'name': 'Артём', 'age': 20};
-  print(person['name']);
-  person['city'] = 'Волжский';
-
-  List<String> fruits2 = ['яблоко', 'банан', 'груша'];
-  for (var fruit in fruits2) {
-    print(fruit);
-  }
+  names.forEach((name) {
+    print('Привет, $name!');
+  });
 }
