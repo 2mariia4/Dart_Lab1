@@ -1,13 +1,46 @@
 void main(){
-  List<int> numbers = [3, 1, 4, 1, 5, 9];
-  numbers.sort((a, b) => b - a);
-  print(numbers);
+  //Условия
+  int score2 = 85;
+  String grade;
+  if (score2 >= 90) {
+    grade = 'A';
+  } else if (score2 >= 75) {
+    grade = 'B';
+  } else {
+    grade = 'C';
+  }
+  print(grade);
 
-  List<String> names = ['Артём', 'Мария', 'Иван'];
+  String result = score2 >= 60 ? 'Сдал' : 'Не сдал';
+  print(result);
 
-  List<String> upper = names.map((name) => name.toUpperCase()).toList();
-  print(upper);
+  //Циклы
+  for (int i = 0; i < 5; i++){
+    print(i);
+  }
 
-  List<String> longNames = names.where((name) => name.length > 4).toList();
-  print(longNames);
+  List<String> fruits3 = ['яблоко', 'банан', 'груша'];
+  for (var fruit in fruits3){
+    print(fruit);
+  }
+
+  int n = 0;
+  while (n < 3) {
+    print(n);
+    n++;
+  }
+
+  //Switch
+  String day = 'Пн';
+  switch (day) {
+    case 'Сб':
+    case 'Вс':
+      print('Выходной');
+      break;
+    case 'Пн':
+      print('Начало недели');
+      break;
+    default:
+      print('Рабочий день');
+  }
 }
